@@ -18,7 +18,7 @@ def imgshow(img, mean=None, std=None):
 
 	mean = np.array(mean)
 	std = np.array(std)
-	for i in range(3):
+	for i in range(3): 
 		img[i] = img[i]*std[i] + mean[i] # unnormalize
 
 	npimg = img.numpy()

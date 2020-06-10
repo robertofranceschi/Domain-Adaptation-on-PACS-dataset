@@ -50,11 +50,10 @@ def plotImageDistribution(data1, data2, data3, data4, dataset_names, show=False)
     print('Total images per class:', counts)
     print('Mean images per class:', counts.mean())
     print('Std images per class:', counts.std())
-
-  print()
-  print('Element per class for each domain:')
-  for name,count in zip(dataset_names,[counts1,counts2,counts3,counts4]) : 
-    print(f'{name}_dataset: {count}')
+	print()
+	print('Element per class for each domain:')
+	for name,count in zip(dataset_names,[counts1,counts2,counts3,counts4]) : 
+		print(f'{name}_dataset: {count}')
 
   fig, ax = plt.subplots(figsize=(10,7))
 
@@ -73,7 +72,8 @@ def plotImageDistribution(data1, data2, data3, data4, dataset_names, show=False)
   plt.grid(alpha=0.2, axis='y')
 
   plt.legend()
-  plt.show()
+  if show: 
+	plt.show()
   plt.savefig('distribution.png', dpi = 250)
 
 def beep():

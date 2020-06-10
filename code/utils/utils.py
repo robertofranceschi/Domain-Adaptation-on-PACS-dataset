@@ -44,12 +44,15 @@ def plotImageDistribution(data1, data2, data3, data4, dataset_names, show=False)
 	unique, counts4 = np.unique(data4, return_counts=True)
 
 	if show: 
+		print("------ Some statistics ------")
 		print('Total images:', np.sum(counts))
 		print('Number of classes:', len(unique))
 		print('Classes:', unique)
+		print()
 		print('Total images per class:', counts)
 		print('Mean images per class:', counts.mean())
 		print('Std images per class:', counts.std())
+		print()
 		print('Element per class for each domain:')
 		for name,count in zip(dataset_names,[counts1,counts2,counts3,counts4]) : 
 			print(f'{name}_dataset: {count}')

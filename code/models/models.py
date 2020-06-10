@@ -26,10 +26,10 @@ class ReverseLayerF(Function):
 
         return output, None
 
-class DANN(nn.Module):
+class DANN_AlexNet(nn.Module):
 
     def __init__(self, num_classes=1000):
-        super(DANN, self).__init__()
+        super(DANN_AlexNet, self).__init__()
         self.features = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=11, stride=4, padding=2),
             nn.ReLU(inplace=True),
@@ -52,8 +52,9 @@ class DANN(nn.Module):
             nn.Dropout(),
             nn.Linear(4096, 4096),
             nn.ReLU(inplace=True),
-            nn.Linear(4096, 1000),
+            nn.Linear(4096, num_classes),
         )
+        # domain classifier part
         self.GD = nn.Sequential(
             nn.Dropout(),
             nn.Linear(256 * 6 * 6, 4096),
@@ -64,12 +65,9 @@ class DANN(nn.Module):
             nn.Linear(4096, 2),
         )
 
-
     def forward(self, x, alpha=None):
         features = self.features(x)
         # Flatten the features:
-        #features = self.avgpool(features)
-        #features = torch.flatten(features,1)
         features = features.view(features.size(0), -1)
         # If we pass alpha, we can assume we are training the discriminator
         if alpha is not None:
@@ -82,23 +80,27 @@ class DANN(nn.Module):
             class_outputs = self.classifier(features)
             return class_outputs
 
-def dann_net(pretrained=False, progress=True, **kwargs):
+def dann_net(pretrained=False, progress=True, n_classes=7, **kwargs):
     """AlexNet model architecture 
     Args:
         pretrained (bool):  If True, returns a model pre-trained on ImageNet
         progress (bool):    If True, displays a progress bar of the download to stderr
     """
-    net = DANN(**kwargs)
+    
+    net = DANN_AlexNet(**kwargs)
     if pretrained:
         state_dict = load_state_dict_from_url(model_urls['alexnet'], progress=progress)
         net.load_state_dict(state_dict, strict = False)
 
+        # Change output classes in last layer
+        net.classifier[6] = nn.Linear(4096, n_classes)
+        net.GD[6] = nn.Linear(4096, 2)
 
         # Copy pretrained weights from the classifier to the domain_classifier
-        net.dann_classifier[1].weight.data = net.classifier[1].weight.data.clone()
-        net.dann_classifier[1].bias.data = net.classifier[1].bias.data.clone()
+        net.GD[1].weight.data = net.classifier[1].weight.data.clone()
+        net.GD[1].bias.data = net.classifier[1].bias.data.clone()
 
-        net.dann_classifier[4].weight.data = net.classifier[4].weight.data.clone()
-        net.dann_classifier[4].bias.data = net.classifier[4].bias.data.clone()
+        net.GD[4].weight.data = net.classifier[4].weight.data.clone()
+        net.GD[4].bias.data = net.classifier[4].bias.data.clone()
         
     return net

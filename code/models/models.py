@@ -96,11 +96,11 @@ def dann_net(pretrained=False, progress=True, n_classes=7, **kwargs):
         net.classifier[6] = nn.Linear(4096, n_classes)
         net.GD[6] = nn.Linear(4096, 2)
 
-        # Copy pretrained weights from the classifier to the domain_classifier
+        # Copy pretrained weights from the classifier to the domain_classifier (GD)
         net.GD[1].weight.data = net.classifier[1].weight.data.clone()
         net.GD[1].bias.data = net.classifier[1].bias.data.clone()
 
-        #net.GD[4].weight.data = net.classifier[4].weight.data.clone()
-        #net.GD[4].bias.data = net.classifier[4].bias.data.clone()
+        net.GD[4].weight.data = net.classifier[4].weight.data.clone()
+        net.GD[4].bias.data = net.classifier[4].bias.data.clone()
         
     return net

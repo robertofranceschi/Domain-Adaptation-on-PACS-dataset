@@ -49,7 +49,7 @@ def plotLosses(class_loss, source_loss, target_loss, n_epochs=30, show=False) :
 		plt.savefig('losses.png', dpi=250)
 	return
 
-def plotImageDistribution(data1, data2, data3, data4, dataset_names, show=False):
+def plotImageDistribution(data1, data2, data3, data4, dataset_names, classes_names, show=False):
 	# concatenate datasets
 	data = np.concatenate( (data1, data2, data3, data4) )
 	# count element per class
@@ -65,7 +65,7 @@ def plotImageDistribution(data1, data2, data3, data4, dataset_names, show=False)
 		print('Total images:', np.sum(counts))
 		print('Number of classes:', len(unique))
 		print('Classes:', unique)
-		print('Classes Names:', data1.classes) 
+		print('Classes Names:', classes_names) 
 		print()
 		print('Total images per class:', counts)
 		print('Mean images per class:', counts.mean())
@@ -85,7 +85,6 @@ def plotImageDistribution(data1, data2, data3, data4, dataset_names, show=False)
 
 	width=0.18
 
-	#plt.bar(unique, counts, width=width, color=color)
 	plt.bar(unique-2*(width)+(width/2), counts1, width=width, color='#FF8F77', linewidth=0.5, label='Photo')
 	plt.bar(unique-(width/2), counts2, width=width, color='#FFDF77', linewidth=0.5, label='Art paintings')
 	plt.bar(unique+(width/2), counts3, width=width, color='#8DF475', linewidth=0.5, label='Cartoon')

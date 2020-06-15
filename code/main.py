@@ -219,7 +219,6 @@ for epoch in range(NUM_EPOCHS):
   
   net.train(True)
 
-  #print('--- Epoch {}/{}, LR = {}  ALPHA = [{}] TARGET DATASET = [{}]'.format(epoch+1, NUM_EPOCHS, scheduler.get_lr(), ALPHA, transfer_set))
   print(f"--- Epoch {epoch+1}/{NUM_EPOCHS}, LR = {scheduler.get_last_lr()}")
   
   # Iterate over the dataset

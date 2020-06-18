@@ -59,6 +59,8 @@ NUM_EPOCHS = 30       # Total number of training epochs (iterations over dataset
 STEP_SIZE = 20        # How many epochs before decreasing learning rate (if using a step-down policy)
 MODE = '4C'           # '3A', '3B', '4A', '4C'
 ALPHA = 0.25          # alpha
+ALPHA_EXP = False
+
 
 EVAL_ACCURACY_ON_TRAINING = False
 SHOW_IMG = True       # if 'True' show images and graphs on output
@@ -243,7 +245,12 @@ for epoch in range(NUM_EPOCHS):
       # Load target batch
       target_images, target_labels = next(iter(target_dataloader))
       target_images = target_images.to(DEVICE) 
-
+      
+      # if ALPHA_EXP : 
+      #   # ALPHA exponential decaying as described in the paper
+      #   p = float(i + epoch * len_dataloader) / NUM_EPOCHS / len_dataloader
+      #   ALPHA = 2. / (1. + np.exp(-10 * p)) - 1
+    
       # STEP 2: train the discriminator: forward SOURCE data to Gd          
       outputs = net.forward(source_images, alpha=ALPHA)
       # source's label is 0 for all data    

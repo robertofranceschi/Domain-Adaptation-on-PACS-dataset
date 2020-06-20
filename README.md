@@ -13,6 +13,6 @@ Useful links:
 
 [2] Ganin, Y., Ustinova, E., Ajakan, H., Germain, P., Larochelle, H., Laviolette, F., Marchand, M., & Lempitsky, V.S. (2016). Domain-Adversarial Training of Neural Networks. ArXiv, [abs/1505.07818](https://arxiv.org/abs/1505.07818).
 
-[3] Li, D., Yang, Y., Song, Y.Z., & Hospedales, T. (2017). Deeper, Broader and Artier Domain Generalization. In International Conference on Computer Vision. ArXiv, [abs/1710.03077](https://arxiv.org/abs/1710.03077)
+[3] Li, D., Yang, Y., Song, Y.Z., & Hospedales, T. (2017). Deeper, Broader and Artier Domain Generalization. In International Conference on Computer Vision. ArXiv, [abs/1710.03077](https://arxiv.org/abs/1710.03077).
 
-[4] PyTorch implementation of Domain-Adversarial Neural Networks (DANN), [link](https://github.com/fungtion/DANN)
+[4] PyTorch implementation of Domain-Adversarial Neural Networks (DANN) by @fungtion, [link](https://github.com/fungtion/DANN)

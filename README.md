@@ -7,6 +7,8 @@ Useful links:
 - [Report and discussion](/report.pdf)
 
 
+--- 
+
 ### References
 
 [1] Krizhevsky, Alex & Sutskever, Ilya & Hinton, Geoffrey. (2012). ImageNet Classification with Deep Convolutional Neural Networks. Neural Information Processing Systems. 25. 10.1145/3065386 [paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)

@@ -1,17 +1,17 @@
 # Domain adaptation on PACS dataset
 Implementation of Domain adaptation on PACS dataset using a modified version of Alexnet.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1d05ErjIoe4qO3AH9x9qO6YIi_XcV1paT?usp=sharing)
 
 Useful links: 
-- [Google Colab](https://colab.research.google.com/drive/1d05ErjIoe4qO3AH9x9qO6YIi_XcV1paT?usp=sharing)
-- [Results](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw)
-- [Report and discussion](/report.pdf)
+- [Report](/report.pdf)
+- [Spreadsheet results](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw)
 
 
 ---
 
 ### References
 
-[1] Krizhevsky, Alex & Sutskever, Ilya & Hinton, Geoffrey. (2012). ImageNet Classification with Deep Convolutional Neural Networks. Neural Information Processing Systems. 25. 10.1145/3065386<br>
-[2] Ganin, Y., Ustinova, E., Ajakan, H., Germain, P., Larochelle, H., Laviolette, F., Marchand, M., & Lempitsky, V.S. (2016). Domain-Adversarial Training of Neural Networks. ArXiv, abs/1505.07818<br>
-[3] Li, D., Yang, Y., Song, Y.Z., & Hospedales, T. (2017). Deeper, Broader and Artier Domain Generalization. In International Conference on Computer Vision. ArXiv, abs/1710.03077<br>
+[1] Krizhevsky, Alex et al. “ImageNet classification with deep convolutional neural networks.” Communications of the ACM 60 (2012): 84 - 90.<br>
+[2] Ganin Y. et al. “Domain-adversarial training of neural networks.” Journal of Machine Learning Research (2016)<br>
+[3] Li, Da et al. “Deeper, Broader and Artier Domain Generalization.” 2017 IEEE International Conference on Computer Vision (ICCV) (2017): 5543-5551.<br>
 [4] PyTorch implementation of Domain-Adversarial Neural Networks (DANN) by @fungtion - [github](https://github.com/fungtion/DANN).

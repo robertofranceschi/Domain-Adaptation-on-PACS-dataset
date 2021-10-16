@@ -32,6 +32,8 @@ In the following figure we can appreciate the different data distribution among 
 Sample images from the PACS dataset for the class 'horse' one for each domain, from left to right photo, art painting, cartoon and sketch.
 </p>
 
+#### Download dataset
+
 The PACS dataset is available in the following repo:
 ```python
   # Clone github repository with data

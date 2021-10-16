@@ -16,9 +16,12 @@ significantly from the training data, the model might not perform very well.
 In order to tackle the issue, a modified version of the AlexNet [1] is used allowing not only to classify input images in the source domain but also to transfer this capability to the target domain. 
 
 ### Dataset
-For this anaysis the PACS dataset [2] is used. It contains overall 9991 images, splittd unevenly between 7 classes and 4 domains: `Art painting`, `Cartoon`, `Photo` and `Sketch`.
+For this anaysis the PACS dataset [2] is used. It contains overall 9991 images, splittd unevenly among:
+- 7 classes (Dog, Elephant, Giraffe, Guitar, Horse, House, Person) and 
+- 4 domains: `Art painting`, `Cartoon`, `Photo` and `Sketch`.
 
-
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
 
 The PACS dataset is available in the following repo:
 ```python

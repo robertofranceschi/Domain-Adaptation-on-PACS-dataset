@@ -45,14 +45,14 @@ The PACS dataset is available in the following repo:
 ```
 
 #### Requirements
-Python 3.7.12
+Python 3.7.12 and Jupyter Notebook along with the following packages are required to run the code.
 
-  torchvision==0.5.0
-  torch==1.3.1
-  numpy
-  matplotlib
-  PIL
-  tqdm
+    torchvision==0.5.0
+    torch==1.3.1
+    numpy
+    matplotlib
+    PIL
+    tqdm
   
   
 ---

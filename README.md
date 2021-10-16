@@ -20,7 +20,8 @@ This repo is organized as follows:
 
 ## 👨‍💻 Implementation 
 
-🔗 Details about the experiments: [spreadsheet experiments](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw)
+
+🔗 Details about the experiments: [spreadsheet experiments](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw).
 
 ▶ Further details about discussion and results are available in the [project report](./report.pdf).
 

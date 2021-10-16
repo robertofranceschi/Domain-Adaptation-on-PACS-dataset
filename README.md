@@ -2,10 +2,19 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1d05ErjIoe4qO3AH9x9qO6YIi_XcV1paT?usp=sharing)
 
+Custom implementation of DANN, a Domain adaptation algorithm, on PACS dataset [2] using a modified version of Alexnet [1]. 
+
 ## Problem description
-Implementation of Domain adaptation on PACS dataset [2] using a modified version of Alexnet [1].
+In a ML task we often assumes that the training data representative of the underlying distribution. However, if the inputs at test time differ
+significantly from the training data, the model might not perform very well. 
+
+In order to tackle the issue, a modified version of the AlexNet [1] is used alling not only to classify input images in the source domain but also to transfer this capability to the target domain. 
+
+    Domain adaptation is the ability to apply an algorithm trained in one or more "source domains" to a different (but related) "target domain". Domain adaptation is a subcategory of transfer learning.
 
 ### Dataset
+For this anaysis I used the PACS dataset [2] 
+
 The PACS dataset is available in the following repo:
 ```python
   # Clone github repository with data

@@ -10,7 +10,7 @@ significantly from the training data, the model might not perform very well.
 
 In order to tackle the issue, a modified version of the AlexNet [1] is used alling not only to classify input images in the source domain but also to transfer this capability to the target domain. 
 
-    Domain adaptation is the ability to apply an algorithm trained in one or more "source domains" to a different (but related) "target domain". Domain adaptation is a subcategory of transfer learning.
+> Domain adaptation is the ability to apply an algorithm trained in one or more "source domains" to a different (but related) "target domain". Domain adaptation is a subcategory of transfer learning.
 
 ### Dataset
 For this anaysis I used the PACS dataset [2] 

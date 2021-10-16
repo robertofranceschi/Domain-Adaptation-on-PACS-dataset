@@ -5,9 +5,6 @@
 Custom implementation of DANN, a Domain adaptation algorithm, on PACS dataset [2] using a modified version of Alexnet [1]. 
 
 ![Network architecure](/images/dann_architecture.jpg)
-<p align = "center">
-Fig.1 - Domain Adaptation Neural Network
-</p>
 
 ## 🗂 Folder organization
 This repo is organized as follows: 
@@ -28,9 +25,11 @@ For this anaysis the PACS dataset [2] is used. It contains overall 9991 images, 
 - 7 classes (Dog, Elephant, Giraffe, Guitar, Horse, House, Person) and 
 - 4 domains: `Art painting`, `Cartoon`, `Photo` and `Sketch`.
 
+In the following figure we can appreciate the different data distribution among domains.
+
 ![example](/images/example_PACSdata_horse.jpg)
 <p align = "center">
-Fig.2 - Sample images from the PACS dataset for the class 'horse' one for each domain, from left to right photo, art painting, cartoon and sketch.
+Sample images from the PACS dataset for the class 'horse' one for each domain, from left to right photo, art painting, cartoon and sketch.
 </p>
 
 The PACS dataset is available in the following repo:
@@ -41,6 +40,9 @@ The PACS dataset is available in the following repo:
 ```
 
 ## 👨‍💻 Implementation 
+Regarding the neural network, the AlexNet network has been used with pretrained weights on ImageNet, and the domain classifier has been created as a copy of the FC part of AlexNet (with only two output neurons) attached at the end of the feature extractor (after the pooling layer). The domain classifier has also been initialized with the same weights as the AlexNet Fully Connected part, except for the output layer.
+
+For easiness, in this work no data augmentation has been performed on the training dataset, since the main focus has been put on the relative difference in performance between the domain adaptation approach and the vanilla one. Though, input data is still being transformed by standardizing each channel according to mean and standard deviations of PyTorch models pretrained on ImageNet and adapting their size to the input required by AlexNet, which is 224x224 pixels (using a `transforms.CenterCrop`).
 
 🔗 Details about the experiments: [spreadsheet experiments](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw).
 

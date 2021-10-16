@@ -4,16 +4,21 @@
 
 Custom implementation of DANN, a Domain adaptation algorithm, on PACS dataset [2] using a modified version of Alexnet [1]. 
 
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
 ## Problem description
-In a ML task we often assumes that the training data representative of the underlying distribution. However, if the inputs at test time differ
+In many ML task we often assumes that the training data are representative of the underlying distribution. However, if the inputs at test time differ
 significantly from the training data, the model might not perform very well. 
 
-In order to tackle the issue, a modified version of the AlexNet [1] is used alling not only to classify input images in the source domain but also to transfer this capability to the target domain. 
+> Domain adaptation is the ability to apply an algorithm trained in one or more "source domains" to a different (but related) "target domain". Domain adaptation is a subcategory of transfer learning. This scenario arises when we aim at learning from a source data distribution a well performing model on a different target data distribution. (Wikipedia)
 
-> Domain adaptation is the ability to apply an algorithm trained in one or more "source domains" to a different (but related) "target domain". Domain adaptation is a subcategory of transfer learning.
+In order to tackle the issue, a modified version of the AlexNet [1] is used allowing not only to classify input images in the source domain but also to transfer this capability to the target domain. 
 
 ### Dataset
-For this anaysis I used the PACS dataset [2] 
+For this anaysis the PACS dataset [2] is used. It contains overall 9991 images, splittd unevenly between 7 classes and 4 domains: `Art painting`, `Cartoon`, `Photo` and `Sketch`.
+
+
 
 The PACS dataset is available in the following repo:
 ```python
@@ -22,17 +27,16 @@ The PACS dataset is available in the following repo:
     !git clone https://github.com/MachineLearning2020/Homework3-PACS
 ```
 
-## 🗂 Folder organization
-This repo is organized as follows: 
-- `/code` contains the different modules used to train and evaluate different models.
-- `/PDFs` contains details about experiments and discuss the results.
-
 ## 👨‍💻 Implementation 
-
 
 🔗 Details about the experiments: [spreadsheet experiments](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw).
 
 ▶ Further details about discussion and results are available in the [project report](./report.pdf).
+
+## 🗂 Folder organization
+This repo is organized as follows: 
+- `/code` contains the different modules used to train and evaluate different models.
+- `/PDFs` contains details about experiments and discuss the results.
 
 ---
 

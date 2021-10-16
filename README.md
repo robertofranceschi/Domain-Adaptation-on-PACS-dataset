@@ -4,9 +4,10 @@
 
 Custom implementation of DANN, a Domain adaptation algorithm, on PACS dataset [2] using a modified version of Alexnet [1]. 
 
-| ![Network architecure](/images/dann_architecture.jpg) |
-|:--:|
-| Fig 1. Domain Adaptation Neural Network |
+![Network architecure](/images/dann_architecture.jpg)
+<p align = "center">
+Fig.1 - Domain Adaptation Neural Network
+</p>
 
 ## 🗂 Folder organization
 This repo is organized as follows: 
@@ -28,7 +29,9 @@ For this anaysis the PACS dataset [2] is used. It contains overall 9991 images, 
 - 4 domains: `Art painting`, `Cartoon`, `Photo` and `Sketch`.
 
 ![example](/images/example_PACSdata_horse.jpg)
-Format: ![Alt Text](url)
+<p align = "center">
+Fig.2 - Sample images from the PACS dataset for the class 'horse' one for each domain, from left to right photo, art painting, cartoon and sketch.
+</p>
 
 The PACS dataset is available in the following repo:
 ```python

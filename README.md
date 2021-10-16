@@ -5,7 +5,7 @@ Implementation of Domain adaptation on PACS dataset using a modified version of 
 
 ## Dataset
 The PACS dataset is available in the following repo:
-```
+```python
   # Clone github repository with data
   if not os.path.isdir('./Homework3-PACS'):
     !git clone https://github.com/MachineLearning2020/Homework3-PACS

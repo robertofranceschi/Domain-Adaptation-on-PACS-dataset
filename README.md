@@ -6,12 +6,6 @@ Custom implementation of DANN, a Domain adaptation algorithm, on PACS dataset [2
 
 ![Network architecure](/images/dann_architecture.jpg)
 
-## 🗂 Folder organization
-This repo is organized as follows: 
-- `/code` contains the different modules used to train and evaluate different models.
-- `/PDFs` contains details about experiments and discuss the results.
-- `/images` contains some example images.
-
 ## Problem description
 In many ML task we often assumes that the training data are representative of the underlying distribution. However, if the inputs at test time differ
 significantly from the training data, the model might not perform very well. 

@@ -44,6 +44,8 @@ For easiness, in this work no data augmentation has been performed on the traini
 
 ▶ Further details about discussion and results are available in the [project report](./report.pdf).
 
+---
+
 ### References
 
 [1] Krizhevsky, Alex et al. “ImageNet classification with deep convolutional neural networks.” Communications of the ACM 60 (2012): 84 - 90.<br>

@@ -7,6 +7,12 @@ Custom implementation of DANN, a Domain adaptation algorithm, on PACS dataset [2
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
 
+## 🗂 Folder organization
+This repo is organized as follows: 
+- `/code` contains the different modules used to train and evaluate different models.
+- `/PDFs` contains details about experiments and discuss the results.
+- `/images` contains some example images.
+
 ## Problem description
 In many ML task we often assumes that the training data are representative of the underlying distribution. However, if the inputs at test time differ
 significantly from the training data, the model might not perform very well. 
@@ -35,13 +41,6 @@ The PACS dataset is available in the following repo:
 🔗 Details about the experiments: [spreadsheet experiments](https://docs.google.com/spreadsheets/d/1uLhNkXpfvKClKMzDB2up0mOgv7D9yjEpBaQuIOw4xbw).
 
 ▶ Further details about discussion and results are available in the [project report](./report.pdf).
-
-## 🗂 Folder organization
-This repo is organized as follows: 
-- `/code` contains the different modules used to train and evaluate different models.
-- `/PDFs` contains details about experiments and discuss the results.
-
----
 
 ### References
 

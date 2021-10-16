@@ -26,15 +26,6 @@ In the following figure we can appreciate the different data distribution among 
 Sample images from the PACS dataset for the class 'horse' one for each domain, from left to right photo, art painting, cartoon and sketch.
 </p>
 
-#### Download dataset
-
-The PACS dataset is available in the following repo:
-```python
-  # Clone github repository with data
-  if not os.path.isdir('./Homework3-PACS'):
-    !git clone https://github.com/MachineLearning2020/Homework3-PACS
-```
-
 ## 👨‍💻 Implementation 
 Regarding the neural network, the AlexNet network has been used with pretrained weights on ImageNet, and the domain classifier has been created as a copy of the FC part of AlexNet (with only two output neurons) attached at the end of the feature extractor (after the pooling layer). The domain classifier has also been initialized with the same weights as the AlexNet Fully Connected part, except for the output layer.
 
@@ -44,6 +35,26 @@ For easiness, in this work no data augmentation has been performed on the traini
 
 ▶ Further details about discussion and results are available in the [project report](./report.pdf).
 
+#### Download dataset
+
+The PACS dataset is available in the following repo:
+```python
+  # Clone github repository with data
+  if not os.path.isdir('./Homework3-PACS'):
+    !git clone https://github.com/MachineLearning2020/Homework3-PACS
+```
+
+#### Requirements
+Python 3.7.12
+
+  torchvision==0.5.0
+  torch==1.3.1
+  numpy
+  matplotlib
+  PIL
+  tqdm
+  
+  
 ---
 
 ### References
